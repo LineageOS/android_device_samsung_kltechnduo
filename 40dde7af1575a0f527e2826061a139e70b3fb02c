@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_1582c094",
+        "filename": "rootdir/etc/init.target.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-05-24T08:07:27Z",
+      "side": 1,
+      "message": "Don\u0027t change the indentation needlessly",
+      "revId": "40dde7af1575a0f527e2826061a139e70b3fb02c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
