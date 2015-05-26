@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a89bdaa_a702c93c",
+        "filename": "mkbootimg.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-05-26T06:38:24Z",
+      "side": 1,
+      "message": "I didn\u0027t get why your mkbootimage.mk required adding some of the k-r0* DTS files. I see they are listed in the kernel, but are those actually used by the shipping CHN variants?",
+      "revId": "5de08238410d656d69c3423e5adf1695e58d59a6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
