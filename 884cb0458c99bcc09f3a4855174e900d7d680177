@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df140735_f90cb743",
+        "filename": "audio/audio_hw.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-07-21T05:40:22Z",
+      "side": 1,
+      "message": "You can just rename the corresponding section in your mixer_paths to match the stock voice2-call.",
+      "range": {
+        "startLine": 173,
+        "startChar": 34,
+        "endLine": 173,
+        "endChar": 35
+      },
+      "revId": "884cb0458c99bcc09f3a4855174e900d7d680177",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df140735_19188b7f",
+        "filename": "audio/voice.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-07-21T05:40:22Z",
+      "side": 1,
+      "message": "If this is your only change, consider making this to the 8974 HAL at hardware/qcomaudio/msm8974 instead.",
+      "range": {
+        "startLine": 386,
+        "startChar": 16,
+        "endLine": 386,
+        "endChar": 18
+      },
+      "revId": "884cb0458c99bcc09f3a4855174e900d7d680177",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
