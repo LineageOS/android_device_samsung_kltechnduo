@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f2577a7_a58ee924",
+        "filename": "init/init_klte.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2015-10-24T17:29:47Z",
+      "side": 1,
+      "message": "Did you get this to compile? I\u0027m sure you\u0027ll have to use \u0027char const\u0027 instead of \u0027char\u0027, otherwise you get \"error: deprecated conversion from string constant to \u0027char*\u0027 [-Werror\u003dwrite-strings]\".",
+      "range": {
+        "startLine": 46,
+        "startChar": 21,
+        "endLine": 47,
+        "endChar": 29
+      },
+      "revId": "d9f9a8bc705a347e31c93bac45c64bb6e2fa85fe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
