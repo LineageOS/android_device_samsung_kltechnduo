@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2013, The Linux Foundation. All rights reserved.
+   Copyright (c) 2017, The LineageOS Project. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -41,7 +42,6 @@ void gsm_properties(char const default_network[])
 {
     property_set("telephony.lteOnGsmDevice", "1");
     property_set("ro.telephony.default_network", default_network);
-    property_set("ro.telephony.ril.config", "newDialCode");
 }
 
 void cdma_properties(char const default_cdma_sub[], char const operator_numeric[],
@@ -52,7 +52,6 @@ void cdma_properties(char const default_cdma_sub[], char const operator_numeric[
     property_set("ro.cdma.home.operator.alpha", operator_alpha);
     property_set("ro.telephony.default_cdma_sub", default_cdma_sub);
     property_set("ro.telephony.default_network", default_network);
-    property_set("ro.telephony.ril.config", "newDriverCallU,newDialCode");
     property_set("telephony.lteOnCdmaDevice", "1");
 }
 
