@@ -66,26 +66,26 @@ void init_target_properties()
 
     if (bootloader.find("G9006W") == 0) {
         /* klteduoszn */
-        property_set("ro.build.fingerprint", "samsung/klteduoszn/klteduoszn:5.0/LRX21T/G9006WZNU1BOC2:user/release-keys");
-        property_set("ro.build.description", "klteduoszn-user 5.0 LRX21T G9006WZNU1BOC2 release-keys");
+        property_set("ro.build.fingerprint", "samsung/klteduoszn/klteduoszn:6.0.1/MMB29M/G9006WZNU1CPJ2:user/release-keys");
+        property_set("ro.build.description", "klteduoszn-user 6.0.1 MMB29M G9006WZNU1CPJ2 release-keys");
         property_set("ro.product.model", "SM-G9006W");
         property_set("ro.product.device", "klteduoszn");
         property_set("rild.libpath", "/system/lib/libsec-ril.so");
         gsm_properties("9");
     } else if (bootloader.find("G9008W") == 0) {
         /* klteduoszm */
-        property_set("ro.build.fingerprint", "samsung/klteduoszm/klteduoszm:5.0/LRX21T/G9008WZMU1BOC2:user/release-keys");
-        property_set("ro.build.description", "klteduoszm-user 5.0 LRX21T G9008WZMU1BOC2 release-keys");
+        property_set("ro.build.fingerprint", "samsung/klteduoszm/klte:6.0.1/MMB29M/G9008WZMU1CQB1:user/release-keys");
+        property_set("ro.build.description", "klteduoszm-user 6.0.1 MMB29M G9008WZMU1CQB1 release-keys");
         property_set("ro.product.model", "SM-G9008W");
-        property_set("ro.product.device", "klteduoszm");
+        property_set("ro.product.device", "klte");
         property_set("rild.libpath", "/system/lib/libsec-ril.so");
         gsm_properties("17");
     } else if (bootloader.find("G9009W") == 0) {
         /* klteduosctc */
-        property_set("ro.build.fingerprint", "samsung/klteduosctc/klte:5.0/LRX21T/G9009WKEU1BOI2:user/release-keys");
-        property_set("ro.build.description", "klteduosctc-user 5.0 LRX21T G9009WKEU1BOI2 release-keys");
+        property_set("ro.build.fingerprint", "samsung/klteduosctc/klte:5.0/LRX21T/G9009WKEU1BPD2:user/release-keys");
+        property_set("ro.build.description", "klteduosctc-user 5.0 LRX21T G9009WKEU1BPD2 release-keys");
         property_set("ro.product.model", "SM-G9009W");
-        property_set("ro.product.device", "klteduosctc");
+        property_set("ro.product.device", "klte");
         property_set("gsm.current.vsid", "0");
         property_set("gsm.current.vsid2", "1");
         property_set("rild.libpath", "/system/lib/libsec-ril-09w.so");
