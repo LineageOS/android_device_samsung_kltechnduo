@@ -82,8 +82,8 @@ void init_target_properties()
         gsm_properties("17");
     } else if (bootloader.find("G9009W") == 0) {
         /* klteduosctc */
-        property_set("ro.build.fingerprint", "samsung/klteduosctc/klte:5.0/LRX21T/G9009WKEU1BPD2:user/release-keys");
-        property_set("ro.build.description", "klteduosctc-user 5.0 LRX21T G9009WKEU1BPD2 release-keys");
+        property_set("ro.build.fingerprint", "samsung/klteduosctc/klte:6.0.1/MMB29M/G9009WKEU1CQB2:user/release-keys");
+        property_set("ro.build.description", "klteduosctc-user 6.0.1 MMB29M G9009WKEU1CQB2 release-keys");
         property_set("ro.product.model", "SM-G9009W");
         property_set("ro.product.device", "klte");
         property_set("gsm.current.vsid", "0");
