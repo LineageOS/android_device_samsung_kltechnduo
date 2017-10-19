@@ -1,21 +1,6 @@
-# CNE
-vendor/lib/libcne.so
-vendor/lib/libcneapiclient.so
-vendor/lib/libcneconn.so
-vendor/lib/libcneqmiutils.so
-vendor/lib/libmasc.so
-vendor/lib/libNimsWrap.so
-vendor/lib/libvendorconn.so
-vendor/lib/libwqe.so
-vendor/lib/libxml.so
+# Samsung Package Version: G9006WZNU1BPE1_G9006WCHU1BPE1_CHU, unless pinned
 
-# Listen service
-vendor/lib/liblistenhardware.so
-vendor/lib/liblistenjni.so
-vendor/lib/liblisten.so
-vendor/lib/liblistensoundmodel.so
-
-# Radio
+# Radio - G9009W RIL blobs from G9009WKEU1BPD2_G9009WCTC1BPD2_CTC
 bin/efsks
 bin/ks
 bin/qcks
@@ -27,28 +12,9 @@ lib/libreference-ril.so
 lib/libril.so
 lib/librilutils.so
 lib/libsec-ril.so
-lib/libsec-ril-09w.so
+lib/libsec-ril-09w.so|beb23deadb2eddc07d8f429ca1ac0a06e634f789
 lib/libsec-ril-dsds.so
-lib/libsec-ril-dsds-09w.so
+lib/libsec-ril-dsds-09w.so|11bc98a35d150ad01016301b4ec851ebae9a675f
 lib/libsecnativefeature.so
 lib/libsecril-client.so
 vendor/lib/libril-qcril-hook-oem.so
-
-# WFD
-vendor/lib/libwfdcommonutils.so
-vendor/lib/libwfdhdcpcp.so
-vendor/lib/libwfdmmsink.so
-vendor/lib/libwfdmmsrc.so
-vendor/lib/libwfdmmutils.so
-vendor/lib/libwfdnative.so
-vendor/lib/libwfdrtsp.so
-vendor/lib/libwfdsm.so
-vendor/lib/libwfduibcinterface.so
-vendor/lib/libwfduibcsink.so
-vendor/lib/libwfduibcsinkinterface.so
-vendor/lib/libwfduibcsrc.so
-vendor/lib/libwfduibcsrcinterface.so
-vendor/lib/libmmwfdinterface.so
-vendor/lib/libmmwfdsinkinterface.so
-vendor/lib/libmmwfdsrcinterface.so
-
