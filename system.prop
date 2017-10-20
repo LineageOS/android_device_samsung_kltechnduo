@@ -1,6 +1,5 @@
 # Radio
 rild.libargs=-d /dev/smd0
-ro.ril.telephony.mqanelements=6
 
 # RIL
 persist.radio.multisim.config=dsds
