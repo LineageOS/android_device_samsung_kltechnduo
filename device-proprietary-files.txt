@@ -1,17 +1,8 @@
-# Samsung Package Version: G9006WZNU1BPE1_G9006WCHU1BPE1_CHU, unless pinned
+# Radio - pinned to G9006WZNU1BPE1_G9006WCHU1BPE1_CHU
+lib/libril.so|1577a19a09ba320b4bc99948225ce337a58a82e0
+lib/libsec-ril.so|5510ece5049d1281377e865fa3085939638641a8
+lib/libsec-ril-dsds.so|9aa48488e9a45fe3631e6698fb78c5252d3b9a71
 
-# Radio - G9009W RIL blobs from G9009WKEU1BPD2_G9009WCTC1BPD2_CTC
-bin/efsks
-bin/ks
-bin/qcks
-bin/qmuxd
-bin/rfs_access
-bin/rild
-bin/rmt_storage
-lib/libril.so
-lib/librilutils.so
-lib/libsec-ril.so
+# Radio (SM-G9009W - CDMA) - pinned to G9009WKEU1BPD2_G9009WCTC1BPD2_CTC
 lib/libsec-ril-09w.so|beb23deadb2eddc07d8f429ca1ac0a06e634f789
-lib/libsec-ril-dsds.so
 lib/libsec-ril-dsds-09w.so|11bc98a35d150ad01016301b4ec851ebae9a675f
-vendor/lib/libril-qcril-hook-oem.so
