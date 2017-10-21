@@ -1,5 +1,4 @@
 # Radio - pinned to G9006WZNU1BPE1_G9006WCHU1BPE1_CHU
-lib/libril.so|1577a19a09ba320b4bc99948225ce337a58a82e0
 lib/libsec-ril.so|5510ece5049d1281377e865fa3085939638641a8
 lib/libsec-ril-dsds.so|9aa48488e9a45fe3631e6698fb78c5252d3b9a71
 
