@@ -38,15 +38,31 @@
 
 #include "init_msm8974.h"
 
-void gsm_properties(char const default_network[])
+void set_rild_libpath(char const *variant)
 {
+    std::string libpath("/system/vendor/lib/libsec-ril.");
+    libpath += variant;
+    libpath += ".so";
+
+    property_override("rild.libpath", libpath.c_str());
+}
+
+void gsm_properties(char const default_network[]
+        char const *rild_lib_variant)
+{
+    set_rild_libpath(rild_lib_variant);
+
     property_set("telephony.lteOnGsmDevice", "1");
     property_set("ro.telephony.default_network", default_network);
 }
 
 void cdma_properties(char const default_cdma_sub[], char const operator_numeric[],
-        char const operator_alpha[], char const default_network[])
+        char const operator_alpha[],
+        char const default_network[],
+        char const *rild_lib_variant)
 {
+    set_rild_libpath(rild_lib_variant);
+
     property_set("ril.subscription.types", "NV,RUIM");
     property_set("ro.cdma.home.operator.numeric", operator_numeric);
     property_set("ro.cdma.home.operator.alpha", operator_alpha);
@@ -69,16 +85,14 @@ void init_target_properties()
         property_override("ro.build.description", "klteduoszn-user 6.0.1 MMB29M G9006WZNU1CPJ2 release-keys");
         property_override("ro.product.model", "SM-G9006W");
         property_override("ro.product.device", "klteduoszn");
-        property_set("rild.libpath", "/system/lib/libsec-ril.so");
-        gsm_properties("9");
+        gsm_properties("9", "06w");
     } else if (bootloader.find("G9008W") == 0) {
         /* klteduoszm */
         property_override("ro.build.fingerprint", "samsung/klteduoszm/klte:6.0.1/MMB29M/G9008WZMU1CQB1:user/release-keys");
         property_override("ro.build.description", "klteduoszm-user 6.0.1 MMB29M G9008WZMU1CQB1 release-keys");
         property_override("ro.product.model", "SM-G9008W");
         property_override("ro.product.device", "klte");
-        property_set("rild.libpath", "/system/lib/libsec-ril.so");
-        gsm_properties("17");
+        gsm_properties("17", "06w");
     } else if (bootloader.find("G9009W") == 0) {
         /* klteduosctc */
         property_override("ro.build.fingerprint", "samsung/klteduosctc/klte:6.0.1/MMB29M/G9009WKEU1CQB2:user/release-keys");
@@ -87,8 +101,7 @@ void init_target_properties()
         property_override("ro.product.device", "klte");
         property_set("gsm.current.vsid", "0");
         property_set("gsm.current.vsid2", "1");
-        property_set("rild.libpath", "/system/lib/libsec-ril-09w.so");
-        cdma_properties("0", "46003", "中国电信", "10");
+        cdma_properties("0", "46003", "中国电信", "10", "09w");
     } 
 
     std::string device = property_get("ro.product.device");
