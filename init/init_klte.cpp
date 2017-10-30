@@ -47,7 +47,7 @@ void set_rild_libpath(char const *variant)
     property_override("rild.libpath", libpath.c_str());
 }
 
-void gsm_properties(char const default_network[]
+void gsm_properties(char const default_network[],
         char const *rild_lib_variant)
 {
     set_rild_libpath(rild_lib_variant);
