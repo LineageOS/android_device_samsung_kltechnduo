@@ -8,16 +8,18 @@
 service ril-daemon2 /system/bin/rild -l /system/vendor/lib/libsec-ril-dsds.06w.so -c 2
     class main
     socket rild2 stream 660 root radio
+    socket sap_uim_socket2 stream 660 bluetooth bluetooth
     socket rild-debug2 stream 660 radio system
     user root
-    group radio cache inet misc audio log qcom_diag
+    group radio cache inet misc audio log readproc wakelock qcom_diag
 
 # for G9009W
 service ril-daemon2-09w /system/bin/rild -l /system/vendor/lib/libsec-ril-dsds.09w.so -c 2
     socket rild2 stream 660 root radio
+    socket sap_uim_socket2 stream 660 bluetooth bluetooth
     socket rild-debug2 stream 660 radio system
     user root
-    group radio cache inet misc audio log qcom_diag
+    group radio cache inet misc audio log readproc wakelock qcom_diag
 
 service qcom-ril-sh /system/bin/sh /init.qcom.ril.sh
     class late_start
