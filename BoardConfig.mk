@@ -31,6 +31,7 @@ TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/kltechnduo/init/init_klte.
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_HAL_SUFFIX := msm8974
 
 # inherit from the proprietary version
 -include vendor/samsung/kltechnduo/BoardConfigVendor.mk
