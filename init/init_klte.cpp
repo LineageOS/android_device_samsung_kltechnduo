@@ -57,6 +57,7 @@ void gsm_properties(char const default_network[],
     set_rild_libpath(rild_lib_variant);
 
     property_set("telephony.lteOnGsmDevice", "1");
+    property_set("rild.lib2_type", "gsm");
     property_set("ro.telephony.default_network", default_network);
 }
 
@@ -68,6 +69,7 @@ void cdma_properties(char const default_cdma_sub[], char const operator_numeric[
     set_rild_libpath(rild_lib_variant);
 
     property_set("ril.subscription.types", "NV,RUIM");
+    property_set("rild.lib2_type", "cdma");
     property_set("ro.cdma.home.operator.numeric", operator_numeric);
     property_set("ro.cdma.home.operator.alpha", operator_alpha);
     property_set("ro.telephony.default_cdma_sub", default_cdma_sub);
