@@ -44,26 +44,29 @@ void vendor_load_properties()
 
     if (bootloader.find("G9006W") == 0) {
         /* klteduoszn */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/klteduoszn/klteduoszn:6.0.1/MMB29M/G9006WZNU1CPJ2:user/release-keys");
         property_override("ro.build.description", "klteduoszn-user 6.0.1 MMB29M G9006WZNU1CPJ2 release-keys");
-        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G9006W");
-        property_override_dual("ro.product.device", "ro.product.vendor.device", "klteduoszn");
+        set_ro_product_prop("device", "klteduoszn");
+        set_ro_product_prop("fingerprint", "samsung/klteduoszn/klteduoszn:6.0.1/MMB29M/G9006WZNU1CPJ2:user/release-keys");
+        set_ro_product_prop("model", "SM-G9006W");
+        set_ro_product_prop("name", "klteduoszn");
         gsm_properties("9", "06w");
         property_set("rild.lib2_type", "gsm");
     } else if (bootloader.find("G9008W") == 0) {
         /* klteduoszm */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/klteduoszm/klte:6.0.1/MMB29M/G9008WZMU1CQB1:user/release-keys");
         property_override("ro.build.description", "klteduoszm-user 6.0.1 MMB29M G9008WZMU1CQB1 release-keys");
-        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G9008W");
-        property_override_dual("ro.product.device", "ro.product.vendor.device", "klte");
+        set_ro_product_prop("device", "klte");
+        set_ro_product_prop("fingerprint", "samsung/klteduoszm/klte:6.0.1/MMB29M/G9008WZMU1CQB1:user/release-keys");
+        set_ro_product_prop("model", "SM-G9008W");
+        set_ro_product_prop("name", "klte");
         gsm_properties("17", "06w");
         property_set("rild.lib2_type", "gsm");
     } else if (bootloader.find("G9009W") == 0) {
         /* klteduosctc */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/klteduosctc/klte:6.0.1/MMB29M/G9009WKEU1CQB2:user/release-keys");
         property_override("ro.build.description", "klteduosctc-user 6.0.1 MMB29M G9009WKEU1CQB2 release-keys");
-        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G9009W");
-        property_override_dual("ro.product.device", "ro.product.vendor.device", "klte");
+        set_ro_product_prop("device", "klte");
+        set_ro_product_prop("fingerprint", "samsung/klteduosctc/klte:6.0.1/MMB29M/G9009WKEU1CQB2:user/release-keys");
+        set_ro_product_prop("model", "SM-G9009W");
+        set_ro_product_prop("name", "klte");
         property_set("gsm.current.vsid", "0");
         property_set("gsm.current.vsid2", "1");
         cdma_properties("中国电信", "46003", "0", "10", "09w");
