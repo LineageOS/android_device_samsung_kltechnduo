@@ -1,6 +1,6 @@
 /*
    Copyright (c) 2013, The Linux Foundation. All rights reserved.
-   Copyright (c) 2017-2018, The LineageOS Project. All rights reserved.
+   Copyright (c) 2017-2020, The LineageOS Project. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -42,41 +42,6 @@
 using android::base::GetProperty;
 using android::init::property_set;
 
-void set_rild_libpath(char const *variant)
-{
-    std::string libpath("/system/vendor/lib/libsec-ril.");
-    libpath += variant;
-    libpath += ".so";
-
-    property_override("rild.libpath", libpath.c_str());
-}
-
-void gsm_properties(char const default_network[],
-        char const *rild_lib_variant)
-{
-    set_rild_libpath(rild_lib_variant);
-
-    property_set("telephony.lteOnGsmDevice", "1");
-    property_set("rild.lib2_type", "gsm");
-    property_set("ro.telephony.default_network", default_network);
-}
-
-void cdma_properties(char const default_cdma_sub[], char const operator_numeric[],
-        char const operator_alpha[],
-        char const default_network[],
-        char const *rild_lib_variant)
-{
-    set_rild_libpath(rild_lib_variant);
-
-    property_set("ril.subscription.types", "NV,RUIM");
-    property_set("rild.lib2_type", "cdma");
-    property_set("ro.cdma.home.operator.numeric", operator_numeric);
-    property_set("ro.cdma.home.operator.alpha", operator_alpha);
-    property_set("ro.telephony.default_cdma_sub", default_cdma_sub);
-    property_set("ro.telephony.default_network", default_network);
-    property_set("telephony.lteOnCdmaDevice", "1");
-}
-
 void init_target_properties()
 {
     std::string platform = GetProperty("ro.board.platform", "");
@@ -92,6 +57,7 @@ void init_target_properties()
         property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G9006W");
         property_override_dual("ro.product.device", "ro.product.vendor.device", "klteduoszn");
         gsm_properties("9", "06w");
+        property_set("rild.lib2_type", "gsm");
     } else if (bootloader.find("G9008W") == 0) {
         /* klteduoszm */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/klteduoszm/klte:6.0.1/MMB29M/G9008WZMU1CQB1:user/release-keys");
@@ -99,6 +65,7 @@ void init_target_properties()
         property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G9008W");
         property_override_dual("ro.product.device", "ro.product.vendor.device", "klte");
         gsm_properties("17", "06w");
+        property_set("rild.lib2_type", "gsm");
     } else if (bootloader.find("G9009W") == 0) {
         /* klteduosctc */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/klteduosctc/klte:6.0.1/MMB29M/G9009WKEU1CQB2:user/release-keys");
@@ -107,7 +74,8 @@ void init_target_properties()
         property_override_dual("ro.product.device", "ro.product.vendor.device", "klte");
         property_set("gsm.current.vsid", "0");
         property_set("gsm.current.vsid2", "1");
-        cdma_properties("0", "46003", "中国电信", "10", "09w");
+        cdma_properties("中国电信", "46003", "0", "10", "09w");
+        property_set("rild.lib2_type", "cdma");
     } 
 
     std::string device = GetProperty("ro.product.device", "");
