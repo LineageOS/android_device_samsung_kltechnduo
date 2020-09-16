@@ -31,12 +31,9 @@
 #include <android-base/logging.h>
 #include <android-base/properties.h>
 
-#include "property_service.h"
-
 #include "init_msm8974.h"
 
 using android::base::GetProperty;
-using android::init::property_set;
 
 void vendor_load_properties()
 {
@@ -50,7 +47,7 @@ void vendor_load_properties()
         set_ro_product_prop("model", "SM-G9006W");
         set_ro_product_prop("name", "klteduoszn");
         gsm_properties("9", "06w");
-        property_set("rild.lib2_type", "gsm");
+        property_override("rild.lib2_type", "gsm");
     } else if (bootloader.find("G9008W") == 0) {
         /* klteduoszm */
         property_override("ro.build.description", "klteduoszm-user 6.0.1 MMB29M G9008WZMU1CQB1 release-keys");
@@ -59,7 +56,7 @@ void vendor_load_properties()
         set_ro_product_prop("model", "SM-G9008W");
         set_ro_product_prop("name", "klte");
         gsm_properties("17", "06w");
-        property_set("rild.lib2_type", "gsm");
+        property_override("rild.lib2_type", "gsm");
     } else if (bootloader.find("G9009W") == 0) {
         /* klteduosctc */
         property_override("ro.build.description", "klteduosctc-user 6.0.1 MMB29M G9009WKEU1CQB2 release-keys");
@@ -67,10 +64,10 @@ void vendor_load_properties()
         set_ro_product_prop("fingerprint", "samsung/klteduosctc/klte:6.0.1/MMB29M/G9009WKEU1CQB2:user/release-keys");
         set_ro_product_prop("model", "SM-G9009W");
         set_ro_product_prop("name", "klte");
-        property_set("gsm.current.vsid", "0");
-        property_set("gsm.current.vsid2", "1");
+        property_override("gsm.current.vsid", "0");
+        property_override("gsm.current.vsid2", "1");
         cdma_properties("中国电信", "46003", "0", "10", "09w");
-        property_set("rild.lib2_type", "cdma");
+        property_override("rild.lib2_type", "cdma");
     } 
 
     std::string device = GetProperty("ro.product.device", "");
