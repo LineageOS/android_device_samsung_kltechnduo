@@ -1,7 +1,7 @@
 # Radio - pinned to haxxed G9006WZNU1CPJ2_G9006WCHU1CPJ2_CHU
-lib/libsec-ril.so:vendor/lib/libsec-ril.06w.so|64fb50f69986fec448bbc56332fc2375e9141e13
-lib/libsec-ril-dsds.so:vendor/lib/libsec-ril-dsds.06w.so|79570670b931971129acd3a4b874c3170f429b0f
+lib/libsec-ril.so:vendor/lib/libsec-ril.06w.so|514fc390c7c421998f2c8f497ffc895a3a66cce1
+lib/libsec-ril-dsds.so:vendor/lib/libsec-ril-dsds.06w.so|c8b6a144b03185b48245b9c30275cc6e61bfed26
 
 # Radio (SM-G9009W - CDMA) - pinned to haxxed G9009WKEU1CQB2_G9009WCTC1CQB2_CTC
-lib/libsec-ril.so:vendor/lib/libsec-ril.09w.so|d0dab9bc2670c76719753a1c5bbe88646c9384f9
-lib/libsec-ril-dsds.so:vendor/lib/libsec-ril-dsds.09w.so|4720553d33e6e8739fdff2070472476761cfe814
+lib/libsec-ril.so:vendor/lib/libsec-ril.09w.so|189ad3d60d3703f3212f1f0eb602cc4f9f1b4495
+lib/libsec-ril-dsds.so:vendor/lib/libsec-ril-dsds.09w.so|c665babf9713fe429fcf7bd89a141d3bd3229c82
